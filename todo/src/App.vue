@@ -50,23 +50,23 @@ onMounted(() => {
 		
 		<section class="greeting">
 			<h2 class="title">
-				What's up, <input type="text" id="name" placeholder="Name here" v-model="name">
+			 چخبرا, <input type="text" id="name" placeholder="اسمتو بنویس" v-model="name">
 			</h2>
 		</section>
 
 		<section class="create-todo">
-			<h3>CREATE A TODO</h3>
+			<h3>برای رویاهات بجنگ</h3>
 
 			<form id="new-todo-form" @submit.prevent="addTodo">
-				<h4>What's on your todo list?</h4>
+				<h4>امروز چه کار میخوای انجام بدی</h4>
 				<input 
 					type="text" 
 					name="content" 
 					id="content" 
-					placeholder="e.g. make a video"
+					placeholder="مثلا فیلم دیدن"
 					v-model="input_content" />
 				
-				<h4>Pick a category</h4>
+				<h4>کار امروزت شخصی هست یا تجاری؟</h4>
 				<div class="options">
 
 					<label>
@@ -74,10 +74,10 @@ onMounted(() => {
 							type="radio" 
 							name="category" 
 							id="category1" 
-							value="business"
+							value="تجاری"
 							v-model="input_category" />
 						<span class="bubble business"></span>
-						<div>Business</div>
+						<div>تجاری</div>
 					</label>
 
 					<label>
@@ -85,10 +85,10 @@ onMounted(() => {
 							type="radio" 
 							name="category" 
 							id="category2" 
-							value="personal"
+							value="شخصی"
 							v-model="input_category" />
 						<span class="bubble personal"></span>
-						<div>Personal</div>
+						<div>شخصی</div>
 					</label>
 
 				</div>
@@ -98,7 +98,7 @@ onMounted(() => {
 		</section>
 
 		<section class="todo-list">
-			<h3>TODO LIST</h3>
+			<h3>لیست انجام کار </h3>
 			<div class="list" id="todo-list">
 
 				<div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">

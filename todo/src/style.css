@@ -12,12 +12,17 @@
 	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
 	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
+@font-face {
+  font-family: 'iransans';
+  src: url(./font/IRANSans-Medium\ [@ClubEdits].ttf);
+}
 
+body{font-family: 'iransans';}
 * {
+  direction: rtl;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'montserrat', sans-serif;
 }
 
 input:not([type="radio"]):not([type="checkbox"]), button {
